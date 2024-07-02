@@ -54,6 +54,11 @@ body{
     justify-content: space-evenly;
 }
 
+.linkToStyle{
+    color: #3a86ff;
+    font-weight: bold;
+}
+
 .mainFooter{
     box-shadow: 0px 0px 14px #25252533;
     display: flex;
