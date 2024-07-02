@@ -1,74 +1,92 @@
 *{
-    padding: 0%;
-    margin: 0%;
+    padding: 0rem;
+    margin: 0rem;
     box-sizing: border-box;
-        font-family: "Space Grotesk", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 500;
-        font-style: normal;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+body{
+    width: 100vw;
+    min-height: 100vh;
 }
 
 .mainHeader{
-    background: #232323;
+    background: #252525;
     color: #ffffff;
     display: flex;
-    flex-flow: column;
+    flex-flow: column nowrap;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     height: 6rem;
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    width: 100%;
 }
 
 .mainContent{
+    min-height: calc(100vh - 10rem);
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    min-height: calc(100vh - 10rem);
-    margin-top: 6rem;
-}
-
-#avatarImg{
-    height: 20rem;
-    border-radius: 8px;
 }
 
 .fichaCard{
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    height: 20rem;
+    box-shadow: 0px 0px 16px #2525254a;
+    border-radius: 16px;
+}
+
+#avatarImg{
+    height: 20rem;
+    border-radius: 16px;
 }
 
 .fichaInfoSect{
-    width: 20rem;
-    line-height: 1.5rem;
-    padding: 0rem 1rem;
+    width: 26rem;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 1rem;
+    justify-content: space-evenly;
 }
 
 .mainFooter{
-    background: #232323;
-    height: 4rem;
+    box-shadow: 0px 0px 14px #25252533;
     display: flex;
+    flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
+    height: 4rem;
 }
 
 #uadeLogo{
     height: 2rem;
 }
 
-@media screen and (max-width: 700px) {
-    .fichaCard{
-        padding: 2rem 1rem;
-    }
-    
-    .fichaInfoSect{
-        padding-top: 2rem;
+@media screen and (max-width: 800px) {
+
+    #avatarImg{
+        height: auto;
+        width: 24rem;
     }
 
+    .fichaCard{
+        height: auto;
+        width: 24rem;
+    }
     
+}
+
+@media screen and (max-width: 450px) {
+    .mainHeader h1{
+        font-size: 1.4rem;
+    }
+    #avatarImg, .fichaCard{
+        height: auto;
+        width: 90vw;
+    }
 }
